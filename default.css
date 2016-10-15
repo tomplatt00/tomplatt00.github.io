@@ -1,54 +1,196 @@
+@font-face { font-family: Nanami; src: url('rsrc/Nanami-Light.otf'); }
+@font-face { font-family: Nanami-bold; src: url('rsrc/Nanami-Regular.otf'); }
+body, a, .reveal {
+    
+    color: #F50641;
+}
 body {
 
-    font-family: 'Lato', 'Helvetica', sans-serif;
-    color: #32475e;
+    font-family: 'Nanami', 'Helvetica', sans-serif;
     margin: 0;
 }
 h1 {
     
-    font-size: 60px;
-    line-height: 0;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    font-size: 45pt;
+    line-height: 0.15;
+    margin-top: 20pt;
+    margin-bottom: 30pt;
     position: relative;
-    right: 5px;
+    right: 1pt;
+}
+h2 {
+    font-family: 'Nanami-bold';
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+h3{
+    letter-spacing: 2px;
+    font-family: 'Nanami-bold';
+    font-size: 20px;
+    margin-top: 3px;
+    margin-bottom: 8px;
 }
 a {
     text-decoration: none;
-    color: #32475e;
 }
-a:hover {
+a:hover, .reveal:hover {
     text-decoration: underline;
 }
+.reveal:hover {cursor:pointer;}
+
+a.albumDL {
+    text-align-last: justify;
+    font-family: 'Nanami-bold';
+    border-bottom: 2px solid #F50641; 
+    font-size: 15pt;
+    letter-spacing: 2px;
+   /* vertical-align: bottom; */
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 0;
+    /* right:0; */
+    -webkit-transition-duration: 0.05s;
+    transition-duration: 0.05s;
+    -webkit-transition-property: padding-bottom;
+    -webkit-transition-property: border-bottom;
+    transition-property: padding-bottom;
+    transition-property: border-bottom;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+
+a.albumDL:hover, a.albumDL:focus, a.albumDL:active {
+    
+    padding-bottom: 3px;
+    border-bottom: 4px solid #F50641;
+    text-decoration: none;
+}
+
+.albumDL {
+    
+    text-align: justify; width:100%
+}
+
 .content {
     
     margin:15px;
     width:450px;
     
 }
+#socialPanel {
+    height: 38px;
+}
 .socialIcons {
-    
-    position: relative;
-    top: -6px;
+    padding-right: 4px;
+    margin: auto;
     font-size: 25px;
+    display: inline-table;
     line-height: 1;
-    vertical-align: text-top;
 }
 .socialLinks {
-    
+    display: inline-block;
     font-size: 30px;
+    letter-spacing: 2px;
+   /* vertical-align: bottom; */
+    bottom: 0;
+    padding-bottom: 0;
+    /* right:0; */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transition-duration: 0.05s;
+    transition-duration: 0.05s;
+    -webkit-transition-property: padding-bottom;
+    -webkit-transition-property: border-bottom;
+    transition-property: padding-bottom;
+    transition-property: border-bottom;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.socialLinks:hover, .socialLinks:focus, .socialLinks:active {
+    padding-bottom: 0px;
+    border-bottom: 2px solid #F50641;
+    text-decoration: none;
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+}
+.hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #F50641;
+    font-size: 1px;
 }
 
+.vr {
+    height: 30px;
+    position: relative;
+    top: 4px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: inline-table;
+    border-right: 1px solid #F50641;
+}
+.album-art {
+    display: block;
+    width: 50%;
+    border: 1px solid #d2d2d2;
+    float:left;
+}
+.album-margin {
+    display: inline-block;
+    width: 47%;
+    height: 227px;
+    float:right;
+    position: relative
+}
+.album-info {
+
+    font-family: "Courier New", Courier, monospace;
+    font-size: 11pt;
+    margin:0;
+    line-height: 1.6em;
+
+}
 #killsound {
     float: right;
     font-size: 11px;
     line-height: 0;
     position:relative;
-    top: -7px;
+    top: -5px;
 }
 #bodygraphic {
     
     width: 100%;
     height: 100%;
     
+}
+
+
+.reveal {
+    font-family: 'Nanami', 'Helvetica', sans-serif;
+    background: 0;
+    border:0;
+    outline: none;
+    padding-top: 10px;
+    margin-top: 15px;
+    letter-spacing: 2px;
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.centertext{
+    
+}
+.traklist {
+    display: block;
+}
+.release{
+    display:inline-block;
+    padding-bottom: 30px;
 }
