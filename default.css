@@ -1,7 +1,7 @@
 @font-face { font-family: Nanami; src: url('rsrc/Nanami-Light.otf'); }
 @font-face { font-family: Nanami-bold; src: url('rsrc/Nanami-Regular.otf'); }
 body, a, .reveal {
-    background-color: #ffffff;
+    
     color: #F50641;
 }
 body {
