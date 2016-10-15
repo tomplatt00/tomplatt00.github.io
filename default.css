@@ -1,23 +1,47 @@
-@font-face { font-family: Nanami; src: url('rsrc/Nanami-Light.otf'); }
-@font-face { font-family: Nanami-bold; src: url('rsrc/Nanami-Regular.otf'); }
+@font-face { 
+    font-family: Nanami; 
+    src: url('rsrc/fonts/Nanami-Light.otf');
+}
+@font-face { 
+    font-family: Nanami-bold; 
+    src: url('rsrc/fonts/Nanami-Regular.otf');
+    font-style: bold;
+}
+@font-face { 
+    font-family: Profont; 
+    src: url('rsrc/fonts/profontwindows-webfont.ttf')
+    format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    
+}
+@font-face { 
+    font-family: Profont; 
+    src: url('rsrc/fonts/ProFontWindows-Bold.ttf')
+    format('truetype');
+    font-weight: bold;
+    font-style: bold;
+}
 
 body, a, .reveal {
     
     color: #F50641;
 }
+
 body {
     
-    background-color: #ffffff;
+    background-color: #000000;
     font-family: 'Nanami', 'Helvetica', sans-serif;
     margin: 0;
 }
+
 h1 {
     font-size: 3.750em;
     line-height: 0.15;
-    margin-top: 20pt;
-    margin-bottom: 30pt;
+    margin-top: .55em;
     position: relative;
-    right: 1pt;
+    right: .02em;
+    font-kerning: normal;
 }
 h2 {
     font-family: 'Nanami-bold';
@@ -28,8 +52,8 @@ h2 {
 h3{
     letter-spacing: 2px;
     font-family: 'Nanami-bold';
-    font-size: 20px;
-    margin-top: 3px;
+    font-size: 1.25em;
+    margin-top: 0.07em;
     margin-bottom: 8px;
 }
 a {
@@ -42,9 +66,10 @@ a:hover, .reveal:hover {
 
 a.albumDL {
     text-align-last: justify;
+    text-align: justify;
     font-family: 'Nanami-bold';
     border-bottom: 2px solid #F50641; 
-    font-size: 15pt;
+    font-size: 1.25em;
     letter-spacing: 2px;
    /* vertical-align: bottom; */
     position: absolute;
@@ -84,7 +109,7 @@ a.albumDL:hover, a.albumDL:focus, a.albumDL:active {
     height: 38px;
 }
 .socialIcons {
-    padding-right: 4px;
+    padding-right: 0.175em;
     margin: auto;
     font-size: 0.833em;
     display: inline-table;
@@ -139,7 +164,7 @@ a.albumDL:hover, a.albumDL:focus, a.albumDL:active {
 .album-art {
     display: block;
     width: 50%;
-    border: 1px solid #d2d2d2;
+    border: 1px solid rgba(0, 0, 0, 0);
     float:left;
 }
 .album-margin {
@@ -150,35 +175,45 @@ a.albumDL:hover, a.albumDL:focus, a.albumDL:active {
     position: relative
 }
 .album-info {
-
-    font-family: "Courier New", Courier, monospace;
-    font-size: 11pt;
-    margin:0;
-    line-height: 1.6em;
+    font-family: 'Profont', Courier, monospace;
+    font-size: 1em;
+    line-height: 1.4em;
+    text-align: left;
+    
 
 }
+
+.alignRight {
+    
+    text-align: right;
+    float: right;
+    display: inline;
+}
+
+.alignLeft {
+    
+    text-align: left;
+    float: left;
+    display: inline;
+    letter-spacing: .04em;
+    font-size: 1.1em;
+}
+
 #killsound {
     float: right;
     font-size: 0.688em;
     line-height: 0;
     position:relative;
     top: -5px;
+    z-index: 3;
 }
-#bodygraphic {
-    
-    width: 100%;
-    height: 100%;
-    
-}
-
 
 .reveal {
-    font-family: 'Nanami', 'Helvetica', sans-serif;
+    font-family: 'Nanami', Helvetica, sans-serif;
     background: 0;
     border:0;
     outline: none;
-    padding-top: 10px;
-    margin-top: 15px;
+    margin-top: 1.2em;
     letter-spacing: 2px;
     display: block;
     text-align: center;
@@ -189,9 +224,55 @@ a.albumDL:hover, a.albumDL:focus, a.albumDL:active {
     
 }
 .traklist {
-    display: block;
+    overflow: hidden;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 450px;
 }
-.release{
+.release {
     display:inline-block;
     padding-bottom: 30px;
 }
+
+.release-wrapper {
+    display: inline-table;
+}
+
+#bodygraphic {  
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#bandcampPlaylist {filter: contrast(161%) brightness(137%) saturate(72%) hue-rotate(-6deg);}
+
+
+/* dumb crt glow shit */
+
+#bodygraphic {
+    image-rendering: crisp-edges;
+    box-shadow: 0px 0px 32px 11px rgba(245,6,66,0.18);
+    transition: .6s filter cubic-bezier(0.42, 0, 0, 1);
+    transition: .3s box-shadow cubic-bezier(0.42, 0, 0, 1);
+    -webkit-transition: .6s filter cubic-bezier(0.42, 0, 0, 1);
+    -webkit-transition: .3s box-shadow cubic-bezier(0.42, 0, 0, 1);
+}
+
+#bodygraphic:hover {
+    box-shadow: 0px 0px 45px 11px rgba(245,6,66,0.8);
+    -webkit-box-shadow: 0px 0px 45px 11px rgba(245,6,66,0.8);
+    filter: blur(2px) contrast(1.9) brightness(.65) hue-rotate(-15deg);
+    -webkit-filter: blur(2px) contrast(1.9) brightness(.65) hue-rotate(-15deg);
+}
+
+h1 {text-shadow: 0px 0px 20px rgba(245, 6, 66, 0.5);}
+
+h2, h3, a.socialLinks {text-shadow: 0px 0px 20px rgba(245, 6, 66, 0.66);}
+
+a.albumDL {text-shadow: 0px 0px 22px rgba(245, 6, 66, 0.81);}
+
+.hr, .vr {box-shadow: 0px 0px 11px 7px rgba(245,6,66,0.15);}
+
+.album-info {text-shadow: 0px 0px 14px rgba(245, 6, 66, 0.9);}

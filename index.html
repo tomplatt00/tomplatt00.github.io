@@ -3,8 +3,8 @@
 <head>
     <title>EVACOM</title>
     <link href="default.css" rel="stylesheet" type="text/css">
-    <link href="rsrc/socicon/styles.css" rel="stylesheet">
-    <link href="rsrc/glyph/styles.css" rel="stylesheet">
+    <link href="rsrc/fonts/socicon/styles.css" rel="stylesheet">
+    <link href="rsrc/fonts/glyph/styles.css" rel="stylesheet">
     <link href="rsrc/featherlight-1.5.0/release/featherlight.min.css" type="text/css" rel="stylesheet"/>
     <script src="//code.jquery.com/jquery-latest.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -37,75 +37,94 @@
     
 <body>
     <audio id="background_audio" loop autoplay>
-        <source src="rsrc/linnloop441k.ogg">
+        <source src="rsrc/audio/linnloop441k.ogg">
     </audio>
     <div class="content">
-        <a id="killsound" href="#" onclick="document.getElementById('background_audio').muted = true;">[MUTE SOUND]</a>
-        
-        <img src="rsrc/cock_sucker.gif" id="bodygraphic">
-        <h1>EVACOM</h1>
+        <div id="HeadNav">
+            <a id="killsound" href="#" onclick="document.getElementById('background_audio').muted = true;">[MUTE SOUND]</a>
+            <img src="rsrc/img/red.gif"= id="bodygraphic">
+            <h1>EVACOM</h1>
             <div id="socialPanel">
-                <a href="https://evacom.bandcamp.com/" target="_blank" class="socialLinks">
+            <a href="https://evacom.bandcamp.com/" target="_blank" class="socialLinks">
                     <span class="icon-bandcamp-1 socialIcons"></span><span>BC</span>
                 </a>
-                <div class ="vr"></div>
-                <a href="https://soundcloud.com/northernplastix" target="_blank" class="socialLinks">
+            <div class ="vr"></div>
+            <a href="https://soundcloud.com/northernplastix" target="_blank" class="socialLinks">
                     <span class="socicon-soundcloud socialIcons"></span><span>SC</span>
                 </a>
-                <div class ="vr"></div>
-                <a href="https://twitter.com/EVAC0M" target="_blank" class="socialLinks">
+            <div class ="vr"></div>
+            <a href="https://twitter.com/EVAC0M" target="_blank" class="socialLinks">
                     <span class="socicon-twitter socialIcons"></span><span>TW</span>
                     </a>
-                <div class ="vr"></div>
-                <a href="https://www.facebook.com/evac0m/" target="_blank" class="socialLinks">
+            <div class ="vr"></div>
+            <a href="https://www.facebook.com/evac0m/" target="_blank" class="socialLinks">
                     <span class="icon-facebook-official socialIcons"></span><span>FB</span>
                 </a>
-            </div>
+        </div>
+        </div>
         <div class="hr"></div>
-        <h2>selected discography</h2>
-        <div class="release">
-            <a href="#" data-featherlight="rsrc/albumart/EVACOM - Fragments of a Hologram Rose - cover1280px.jpg"><img src="rsrc/albumart/EVACOM%20-%20Fragments%20of%20a%20Hologram%20Rose%20-%20coverthumb.jpg" class="album-art"></a>
-            <div class="album-margin">
-                <h3>Fragments of a Hologram Rose</h3>
-                <p class="album-info">
-                    <span><b>type:</b>&nbsp;LP</span><br>
-                    <span><b>released:</b>&nbsp;Mar 9, 2016</span><br>
-                    <span><b>label:</b>&nbsp;N/A self-released</span><br>
-                    <span><b>format:</b>&nbsp;digital</span><br>
-                    <span><b>length:</b>&nbsp;46 minutes</span><br> 
+        <div id="Discography">
+            <h2>selected discography</h2>
+            <div class="release">
+            <div class="release-wrapper">
+                <a href="#" data-featherlight="rsrc/albumart/EVACOM - Fragments of a Hologram Rose - cover1280px.jpg"><img src="rsrc/albumart/EVACOM%20-%20Fragments%20of%20a%20Hologram%20Rose%20-%20coverthumb.jpg" class="album-art"></a>
+                <div class="album-margin">
+                    <h3>Fragments of a Hologram Rose</h3>
+                    <p class="album-info">
+                    <b class="alignLeft">type:</b><span class="alignRight">full-length LP</span><br>
+                    <b class="alignLeft">released:</b><span class="alignRight">Mar 9, 2016</span><br>
+                    <b class="alignLeft">label:</b><span class="alignRight">N/A self-released</span><br>
+                    <b class="alignLeft">format:</b><span class="alignRight">digital</span><br>
+                    <b class="alignLeft">length:</b><span class="alignRight">46 minutes</span><br> 
                 </p>
-                <a class="albumDL" href="https://evacom.bandcamp.com/album/fragments-of-a-hologram-rose?action=buy&from=embed" target="_blank">$3 USD OR MORE</a>
+                    <a class="albumDL" href="https://evacom.bandcamp.com/album/fragments-of-a-hologram-rose?action=buy&from=embed" target="_blank">$3 USD OR MORE</a>
+                </div>
             </div>
         
             <button class="reveal">hide tracklist</button>
         
-            <div class="traklist">
-                <iframe style="border: 0; width: 100%; height: 510px;" src="https://bandcamp.com/EmbeddedPlayer/album=3884733877/size=large/bgcol=ffffff/linkcol=F50641/artwork=none/transparent=true/" seamless><a href="http://evacom.bandcamp.com/album/fragments-of-a-hologram-rose">Fragments of a Hologram Rose by EVACOM</a></iframe>
+            <div class="traklist" style="height:490px">
+                <iframe id="bandcampPlaylist" style=
+                                                    "border: 0;
+                                                     position: relative;
+                                                     height: 510px;
+                                                     width: 475px;
+                                                     left: -10px;
+                                                     top: -1px;"
+                src="https://bandcamp.com/EmbeddedPlayer/album=3884733877/size=large/bgcol=000000/linkcol=F50641/artwork=none/transparent=true/" seamless><a href="http://evacom.bandcamp.com/album/fragments-of-a-hologram-rose">Fragments of a Hologram Rose by EVACOM</a></iframe>
             </div>
         </div>    
-        <div class="release">
-            <a href="#" data-featherlight="rsrc/albumart/EVACOM - Trouble Shooter - cover1280px.gif"><img src="rsrc/albumart/EVACOM%20-%20Trouble%20Shooter%20-%20coverthumb.gif" class="album-art"></a>
-            <div class="album-margin">
-                <h3>Trouble Shooter</h3>
-                <p class="album-info">
-                    <span><b>type:</b>&nbsp;single</span><br>
-                    <span><b>released:</b>&nbsp;Oct 1, 2015</span><br>
-                    <span><b>label:</b>&nbsp;N/A self-released</span><br>
-                    <span><b>format:</b>&nbsp;digital</span><br>
-                    <span><b>length:</b>&nbsp;15 minutes</span><br>
+            <div class="release">
+            <div class="release-wrapper">
+                <a href="#" data-featherlight="rsrc/albumart/EVACOM - Trouble Shooter - cover1280px.gif"><img src="rsrc/albumart/EVACOM%20-%20Trouble%20Shooter%20-%20coverthumb.gif" class="album-art"></a>
+                <div class="album-margin">
+                    <h3>Trouble Shooter</h3>
+                    <p class="album-info">
+                    <b class="alignLeft">type:</b><span class="alignRight">single</span><br>
+                    <b class="alignLeft">released:</b><span class="alignRight">Oct 1, 2015</span><br>
+                    <b class="alignLeft">label:</b><span class="alignRight">N/A self-released</span><br>
+                    <b class="alignLeft">format:</b><span class="alignRight">digital</span><br>
+                    <b class="alignLeft">length:</b><span class="alignRight">15 minutes</span><br> 
                 </p>
-                <a class="albumDL" href="http://evacom.bandcamp.com/album/trouble-shooter?action=buy&from=embed" target="_blank">FREE DOWNLOAD</a>
+                    <a class="albumDL" href="http://evacom.bandcamp.com/album/trouble-shooter?action=buy&from=embed" target="_blank">FREE DOWNLOAD</a>
                 
+                </div>
             </div>
         
             <button class="reveal">hide tracklist</button>
         
-            <div class="traklist">
-                <iframe style="border: 0; width: 100%; height: 241px;" src="https://bandcamp.com/EmbeddedPlayer/album=2621067954/size=large/bgcol=ffffff/linkcol=F50641/artwork=none/transparent=true/" seamless><a href="http://evacom.bandcamp.com/album/trouble-shooter">Trouble Shooter by EVACOM</a></iframe>
+            <div class="traklist" style="height:220px;">
+                <iframe id="bandcampPlaylist" style="border: 0;
+                                                     position: relative;
+                                                     height: 241px;
+                                                     width: 475px;
+                                                     left: -10px;
+                                                     top: -1px;"
+                src="https://bandcamp.com/EmbeddedPlayer/album=2621067954/size=large/bgcol=000000/linkcol=F50641/artwork=none/transparent=true/" seamless><a href="http://evacom.bandcamp.com/album/trouble-shooter">Trouble Shooter by EVACOM</a></iframe>
             </div>
+        </div>
         </div>
         
     </div>
-    
 </body>
 </html>
