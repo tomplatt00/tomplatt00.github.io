@@ -1,17 +1,18 @@
 @font-face { font-family: Nanami; src: url('rsrc/Nanami-Light.otf'); }
 @font-face { font-family: Nanami-bold; src: url('rsrc/Nanami-Regular.otf'); }
+
 body, a, .reveal {
-    background-color: #ffffff;
+    
     color: #F50641;
 }
 body {
-
+    
+    background-color: #ffffff;
     font-family: 'Nanami', 'Helvetica', sans-serif;
     margin: 0;
 }
 h1 {
-    
-    font-size: 45pt;
+    font-size: 3.750em;
     line-height: 0.15;
     margin-top: 20pt;
     margin-bottom: 30pt;
@@ -20,9 +21,9 @@ h1 {
 }
 h2 {
     font-family: 'Nanami-bold';
-    font-size: 30px;
-    margin-top: 0px;
-    margin-bottom: 30px;
+    font-size: 1.875em;
+    margin-top: 0p;
+    margin-bottom: 1em;
 }
 h3{
     letter-spacing: 2px;
@@ -85,13 +86,13 @@ a.albumDL:hover, a.albumDL:focus, a.albumDL:active {
 .socialIcons {
     padding-right: 4px;
     margin: auto;
-    font-size: 25px;
+    font-size: 0.833em;
     display: inline-table;
     line-height: 1;
 }
 .socialLinks {
     display: inline-block;
-    font-size: 30px;
+    font-size: 1.875em;
     letter-spacing: 2px;
    /* vertical-align: bottom; */
     bottom: 0;
@@ -118,9 +119,9 @@ a.albumDL:hover, a.albumDL:focus, a.albumDL:active {
     transform: translateY(-3px);
 }
 .hr {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #F50641;
+    margin-top: 30em;
+    margin-bottom: 30em;
+    border-bottom: 1em solid #F50641;
     font-size: 1px;
 }
 
@@ -158,7 +159,7 @@ a.albumDL:hover, a.albumDL:focus, a.albumDL:active {
 }
 #killsound {
     float: right;
-    font-size: 11px;
+    font-size: 0.688em;
     line-height: 0;
     position:relative;
     top: -5px;
