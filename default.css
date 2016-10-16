@@ -46,7 +46,7 @@ h1 {
 h2 {
     font-family: 'Nanami-bold';
     font-size: 1.875em;
-    margin-top: 0p;
+    margin-top: 0;
     margin-bottom: 1em;
 }
 h3{
@@ -176,10 +176,8 @@ a.albumDL:hover, a.albumDL:focus, a.albumDL:active {
 }
 .album-info {
     font-family: 'Profont', Courier, monospace;
-    font-size: 1em;
     line-height: 1.4em;
     text-align: left;
-    
 
 }
 
@@ -197,15 +195,22 @@ a.albumDL:hover, a.albumDL:focus, a.albumDL:active {
     display: inline;
     letter-spacing: .04em;
     font-size: 1.1em;
+    font-weight: bold;
 }
 
 #killsound {
-    float: right;
-    font-size: 0.688em;
-    line-height: 0;
-    position:relative;
-    top: -5px;
+    
+    font-family: 'Profont', Courier, monospace;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.2em;
+    position: fixed;
+    top: .5em;
+    right: .5em;
     z-index: 3;
+    text-decoration: none;
+    text-shadow: 0px 3px 5px #000, 0px -3px 5px #000, 0px 0px 5px #000, 0px 0px 10px #001;
+
 }
 
 .reveal {
@@ -240,31 +245,118 @@ a.albumDL:hover, a.albumDL:focus, a.albumDL:active {
     display: inline-table;
 }
 
-#bodygraphic {  
+
+
+#bandcampPlaylist {filter: contrast(161%) brightness(137%) saturate(93%) hue-rotate(-8deg);}
+
+#contact { 
+     margin-bottom: .5em;
+}
+
+#emailMargin {
+    margin-top: .5em;
+    display: inline;
+    width:100%;
+    position: relative;
+    
+}
+
+.mailListing {
+    display:block;
+    width:90%;
+    line-height: 2em;
+    font-family: 'Profont', Courier, monospace;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#emailLeftColumn {
+    display:inline-block;
+    font-size: 1.06em;
+    text-align: justify;
+    text-align-last: justify;
+    max-width: 50%;
+    
+}
+
+#emailRightColumn {
+    display:inline-block;
+    font-size: 1em;
+    max-width:60%;
+    float:right;
+    
+    
+}
+.mailDesc {
+   font-weight: bold;
+}
+.mailto {
+    text-decoration: underline;
+    float: right;
+    font-size: 1em;
+}
+
+/*dumb crt glow shit  dumb crt glow shit  dumb crt glow shit*/
+
+img#headGraphic {
+    display: inherit;
+    position: relative;
+    z-index: -2;
     width: 100%;
-    height: 100%;
-    z-index: 1;
+    -moz-image-rendering: crisp-edges;
+         /*image-rendering: pixelated;*/
+         image-rendering: optimizeSpeed;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    box-shadow: 0px 0px 40px 7px rgba(193, 2, 37, 0.24);
+    -webkit-box-shadow: 0px 0px 40px 7px rgba(193, 2, 37, 0.24);
+    transition: all .3s cubic-bezier(0.42, 0, 0, 1);
+    -webkit-transition: all .3s cubic-bezier(0.42, 0, 0, 1);
+    
+    
 }
 
-#bandcampPlaylist {filter: contrast(161%) brightness(137%) saturate(72%) hue-rotate(-6deg);}
-
-
-/* dumb crt glow shit */
-
-#bodygraphic {
-    image-rendering: crisp-edges;
-    box-shadow: 0px 0px 32px 11px rgba(245,6,66,0.18);
-    transition: .6s filter cubic-bezier(0.42, 0, 0, 1);
-    transition: .3s box-shadow cubic-bezier(0.42, 0, 0, 1);
-    -webkit-transition: .6s filter cubic-bezier(0.42, 0, 0, 1);
-    -webkit-transition: .3s box-shadow cubic-bezier(0.42, 0, 0, 1);
+.ShadowMask {
+    display: inherit;
+    position: relative;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    transition: all .3s cubic-bezier(0.42, 0, 0, 1);
+    -webkit-transition: all .3s cubic-bezier(0.42, 0, 0, 1);
+            box-shadow: inset 0px 0px 40px 15px rgba(20,0,0,.7);
+    -webkit-box-shadow: inset 0px 0px 40px 15px rgba(20,0,0,.7);
+}
+.Halation {
+            display: block;
+            position: relative;
+            border-radius: 0px;
+    -webkit-border-radius: 0px;
+    
+    transition: all .2s ease-out; /* cubic-bezier(0.42, 0, 0, 1); */
+    -webkit-transition: all .2s ease-out; /* cubic-bezier(0.42, 0, 0, 1); */
+    
 }
 
-#bodygraphic:hover {
-    box-shadow: 0px 0px 45px 11px rgba(245,6,66,0.8);
-    -webkit-box-shadow: 0px 0px 45px 11px rgba(245,6,66,0.8);
-    filter: blur(2px) contrast(1.9) brightness(.65) hue-rotate(-15deg);
-    -webkit-filter: blur(2px) contrast(1.9) brightness(.65) hue-rotate(-15deg);
+.Halation:hover {
+            border-radius: 30px;
+    -webkit-border-radius: 30px;
+            filter: blur(1.6px) saturate(.4)contrast(1.15)brightness(2);
+    -webkit-filter: blur(1.6px) saturate(.4)contrast(1.15)brightness(2);
+
+}
+.Halation:hover .ShadowMask {
+            border-radius: 30px;
+    -webkit-border-radius: 30px;
+            box-shadow: inset 0px 0px 45px 20px rgba(20,0,0,.78);
+    -webkit-box-shadow: inset 0px 0px 45px 20px rgba(20,0,0,.78);
+}
+.Halation:hover img#headGraphic {
+            border-radius: 30px;
+    -webkit-border-radius: 30px;
+            image-rendering: pixelated;
+            box-shadow: 0px 0px 60px 10px rgba(181, 8, 36, 0.4);
+    -webkit-box-shadow: 0px 0px 60px 10px rgba(181, 8, 36, 0.4);
+
 }
 
 h1 {text-shadow: 0px 0px 20px rgba(245, 6, 66, 0.5);}

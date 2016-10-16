@@ -33,34 +33,63 @@
             $('<div class="caption">').text(caption).appendTo(this.$instance.find('.featherlight-content'));
         };
     </script>
+    <script type="text/javascript">
+        $(function()
+        {
+            $('.Halation').hover(function()//on over
+            {
+                $('#headGraphic').attr('src', 'rsrc/img/red_thumb.gif');
+            },
+            function()//on out
+            {
+                $('#headGraphic').attr('src', 'rsrc/img/red.gif');
+            })    
+        })
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#killsound").click(function(){
+                $(this).fadeOut(200);
+        });
+    });
+    
+    </script>
 </head> 
     
 <body>
     <audio id="background_audio" loop autoplay>
         <source src="rsrc/audio/linnloop441k.ogg">
     </audio>
+    <a id="killsound"  onclick="document.getElementById('background_audio').muted = true;">[MUTE SOUND]</a>
     <div class="content">
         <div id="HeadNav">
-            <a id="killsound" href="#" onclick="document.getElementById('background_audio').muted = true;">[MUTE SOUND]</a>
-            <img src="rsrc/img/red.gif"= id="bodygraphic">
+            
+            
+                <div class="Halation">
+                    <div class="ShadowMask">
+                        <img src="rsrc/img/red.gif" id="headGraphic">
+                    </div>
+                </div>
+            
+            
             <h1>EVACOM</h1>
             <div id="socialPanel">
-            <a href="https://evacom.bandcamp.com/" target="_blank" class="socialLinks">
+                <a href="https://evacom.bandcamp.com/" target="_blank" class="socialLinks">
                     <span class="icon-bandcamp-1 socialIcons"></span><span>BC</span>
                 </a>
-            <div class ="vr"></div>
-            <a href="https://soundcloud.com/northernplastix" target="_blank" class="socialLinks">
+                <div class ="vr"></div>
+                <a href="https://soundcloud.com/northernplastix" target="_blank" class="socialLinks">
                     <span class="socicon-soundcloud socialIcons"></span><span>SC</span>
                 </a>
-            <div class ="vr"></div>
-            <a href="https://twitter.com/EVAC0M" target="_blank" class="socialLinks">
+                <div class ="vr"></div>
+                <a href="https://twitter.com/EVAC0M" target="_blank" class="socialLinks">
                     <span class="socicon-twitter socialIcons"></span><span>TW</span>
                     </a>
-            <div class ="vr"></div>
-            <a href="https://www.facebook.com/evac0m/" target="_blank" class="socialLinks">
+                <div class ="vr"></div>
+                <a href="https://www.facebook.com/evac0m/" target="_blank" class="socialLinks">
                     <span class="icon-facebook-official socialIcons"></span><span>FB</span>
                 </a>
-        </div>
+            </div>
         </div>
         <div class="hr"></div>
         <div id="Discography">
@@ -125,6 +154,38 @@
         </div>
         </div>
         
+        <div class="hr" style="margin-top: 0;"></div>
+        
+        <h2 id="contact">contact</h2>
+        
+            <div class = "mailListing">
+                <div id="emailLeftColumn">
+                    <span class="mailDesc" style="letter-spacing: .19em;">general inquiry</span><span>:</span><br>
+                    <span class="mailDesc">w/r/t SCANLINE label:</span>
+                </div>
+                <div id="emailRightColumn">
+                
+                    <span class="mailto">
+                <script>
+                    document.write('<'+'a'+' '+'h'+'r'+'e'+'f'+'='+"'"+'&'+'#'+'1'+'0'+'9'+';'+'a'+'i'+'l'+'t'+'o'+'&'+'#'+'5'+'8'+';'+
+'&'+'#'+'1'+'1'+'6'+';'+'&'+'#'+'3'+'7'+';'+'&'+'#'+'5'+'4'+';'+'F'+'m'+'p'+'%'+'6'+'&'+'#'+'6'+'7'+
+';'+'%'+'6'+'&'+'#'+'4'+'9'+';'+'%'+'7'+'4'+'%'+'7'+'4'+'0'+'%'+'3'+'0'+'%'+'4'+'&'+'#'+'4'+'8'+';'+
+'g'+'m'+'&'+'#'+'9'+'7'+';'+'i'+'l'+'&'+'#'+'4'+'6'+';'+'&'+'#'+'9'+'9'+';'+'&'+'#'+'1'+'1'+'1'+';'+
+'%'+'6'+'D'+"'"+'>'+'t'+'o'+'m'+'p'+'l'+'a'+'&'+'#'+'1'+'1'+'6'+';'+'t'+'&'+'#'+'4'+'8'+';'+'0'+'&'+
+'#'+'6'+'4'+';'+'&'+'#'+'1'+'0'+'3'+';'+'&'+'#'+'1'+'0'+'9'+';'+'a'+'i'+'l'+'&'+'#'+'4'+'6'+';'+'c'+
+'o'+'m'+'<'+'/'+'a'+'>');
+                </script>
+                <noscript>[Turn on JavaScript to see the email address]</noscript>
+                </span><br>
+                
+                    <span class="mailto">
+                    <script>
+                        document.write('<'+'a'+'           '+'h'+'r'+'e'+'f'+'='+"'"+'m'+'a'+'&'+'#'+'1'+'0'+'5'+';'+'l'+'t'+'o'+'&'+'#'+'5'+'8'+';'+'&'+'#'+'1'+'1'+'5'+';'+'c'+'a'+'n'+'l'+'&'+'#'+'1'+'0'+'5'+';'+'n'+'&'+'#'+'1'+'0'+'1'+';'+'s'+'%'+'&'+'#'+'5'+'4'+';'+'F'+'&'+'#'+'9'+'9'+';'+'i'+'&'+'#'+'1'+'0'+'1'+';'+'t'+'y'+'&'+'#'+'6'+'4'+';'+'&'+'#'+'1'+'0'+'3'+';'+'&'+'#'+'1'+'0'+'9'+';'+'%'+'6'+'1'+'%'+'6'+'9'+'l'+'%'+'2'+'E'+'c'+'o'+'m'+"'"+'>'+'s'+'c'+'a'+'&'+'#'+'1'+'1'+'0'+';'+'l'+'i'+'&'+'#'+'1'+'1'+'0'+';'+'&'+'#'+'1'+'0'+'1'+';'+'s'+'o'+'c'+'i'+'e'+'t'+'y'+'&'+'#'+'6'+'4'+';'+'g'+'&'+'#'+'1'+'0'+'9'+';'+'a'+'i'+'&'+'#'+'1'+'0'+'8'+';'+'&'+'#'+'4'+'6'+';'+'c'+'o'+'&'+'#'+'1'+'0'+'9'+';'+'<'+'/'+'a'+'>');
+                    </script>
+                    <noscript>[Turn on JavaScript to see the email address]</noscript>
+                </span><br>
+                </div>
+            </div>   
     </div>
 </body>
 </html>
