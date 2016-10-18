@@ -114,6 +114,22 @@ svg {
     display: inline-block;
     width: 100%;
 }
+#logotype {
+    margin-top: .55em;
+    height: 3em;
+    margin-bottom: 1.5em;
+    line-height: 0.15;
+    margin-top: .55em;
+    display: inline-block;
+    position: relative;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    filter: drop-shadow(0px 0px 6px rgba(245, 6, 66, 0.4));
+    -webkit-filter: drop-shadow(0px 0px 6px rgba(245, 6, 66, 0.55));
+}
 #socialPanel {
     display: block;
     width: 92.36%;
@@ -121,6 +137,10 @@ svg {
     height: 2em;
     margin-left: auto;
     white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
 }
 .socialIcons {
     padding-right: 0.175em;
@@ -128,6 +148,12 @@ svg {
     font-size: 0.833em;
     display: inline-table;
     line-height: 1;
+}
+
+.icon-facebook-official {
+    position: relative;
+    top: .09em;
+    font-size: .879em;
 }
 .socialLinks {
     display: inline-block;
@@ -224,20 +250,28 @@ svg {
     z-index: 3;
     text-decoration: none;
     text-shadow: 0px 3px 5px #000, 0px -3px 5px #000, 0px 0px 5px #000, 0px 0px 10px #001;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
 
 }
 
 .reveal {
     font-family: 'Nanami', Helvetica, sans-serif;
+    font-size: .75em;
     background: 0;
     border:0;
     outline: none;
-    margin-top: 1.2em;
+    margin-top: .4em;
     letter-spacing: 2px;
     display: block;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    width:50%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
 }
 .centertext{
     
@@ -249,6 +283,10 @@ svg {
     margin-right: auto;
     text-align: center;
     width: 450px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
 }
 .release {
     display:inline-block;
@@ -276,7 +314,7 @@ svg {
 
 
 
-#bandcampPlaylist {filter: contrast(161%) brightness(137%) saturate(93%) hue-rotate(-8deg);}
+#bandcampPlaylist {filter: contrast(161%) brightness(137%) saturate(93%) hue-rotate(-8deg); -webkit-filter: contrast(161%) brightness(137%) saturate(93%) hue-rotate(-8deg);}
 
 #contact { 
      margin-bottom: .5em;
@@ -364,14 +402,18 @@ img#headGraphic {
     
     transition: all .2s ease-out; /* cubic-bezier(0.42, 0, 0, 1); */
     -webkit-transition: all .2s ease-out; /* cubic-bezier(0.42, 0, 0, 1); */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;  
     
 }
 
 .Halation:hover {
             border-radius: 30px;
     -webkit-border-radius: 30px;
-            filter: blur(1.6px) saturate(.4)contrast(1.15)brightness(2);
-    -webkit-filter: blur(1.6px) saturate(.4)contrast(1.15)brightness(2);
+            filter: blur(1.6px) saturate(1)contrast(1.15)brightness(2);
+    -webkit-filter: blur(1.6px) saturate(1)contrast(1.15)brightness(2);
 
 }
 .Halation:hover .ShadowMask {

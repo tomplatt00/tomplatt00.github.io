@@ -8,18 +8,20 @@
     <link href="rsrc/fonts/glyph/styles.css" rel="stylesheet">
     <link href="rsrc/featherlight-1.5.0/release/featherlight.min.css" type="text/css" rel="stylesheet"/>
     <script src="//code.jquery.com/jquery-latest.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="rsrc/howler/dist/howler.js"></script>
     <script src="rsrc/featherlight-1.5.0/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-            $(".traklist").show(); 
+            $("#bandcampPlaylist").load(function(){
+                $(".traklist").hide(); 
+            });
             $("button.reveal").click(function(){
                 $(this).toggleClass("active").next().slideToggle("slow");
     
-                if ($.trim($(this).text()) === 'hide tracklist') {
-                    $(this).text('show tracklist');
+                if ($.trim($(this).text()) === 'show tracklist') {
+                    $(this).text('hide tracklist');
                 } else {
-                    $(this).text('hide tracklist');        
+                    $(this).text('show tracklist');        
                 }
     
                 return false; 
@@ -51,17 +53,35 @@
         $(document).ready(function(){
             $("#killsound").click(function(){
                 $(this).fadeOut(200);
+                
         });
     });
     
     </script>
+<script>
+    var musicloop = new Howl({
+  src: ['https://tomplatt00.github.io/rsrc/audio/linnloop441k.ogg'],
+  autoplay: true,
+  loop: true,
+  onload: function() {
+    console.log('load');
+  },
+  onplay: function() {
+    console.log('play');
+  },
+  onend: function() {
+    console.log('end');
+  }
+});
+</script>
 </head> 
     
 <body>
-    <audio id="background_audio" loop autoplay>
+    <!--<audio id="background_audio" loop autoplay>
         <source src="rsrc/audio/linnloop441k.ogg">
-    </audio>
-    <a id="killsound"  onclick="document.getElementById('background_audio').muted = true;">[MUTE SOUND]</a>
+    </audio>-->
+    <a id="killsound" onclick="musicloop.stop()">[MUTE SOUND]</a>
+    <!--<a id="killsound" onclick="document.getElementById('background_audio').muted = true;">[MUTE SOUND]</a>-->
     
     <div class="content">
         <div id="HeadNav">
@@ -74,7 +94,8 @@
                 </div>
             
             
-            <h1>EVACOM</h1>
+            <!--<h1>EVACOM</h1>-->
+            <img src="rsrc/img/EVCM.svg" id="logotype">
             <div id="socialPanel">
                 <a href="https://evacom.bandcamp.com/" target="_blank" class="socialLinks">
                     <span class="icon-bandcamp-1 socialIcons"></span><span>BC</span>
@@ -112,7 +133,7 @@
                 </div>
             </div>
         
-            <button class="reveal">hide tracklist</button>
+            <button class="reveal">show tracklist</button>
         
             <div class="traklist" style="height:490px">
                 <iframe id="bandcampPlaylist" style=
@@ -142,7 +163,7 @@
                 </div>
             </div>
         
-            <button class="reveal">hide tracklist</button>
+            <button class="reveal">show tracklist</button>
         
             <div class="traklist" style="height:220px;">
                 <iframe id="bandcampPlaylist" style="border: 0;
