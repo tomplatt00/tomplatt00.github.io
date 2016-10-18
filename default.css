@@ -32,7 +32,8 @@ body {
     
     background-color: #000000;
     font-family: 'Nanami', 'Helvetica', sans-serif;
-    margin:15px;
+    margin: 0px;
+    padding: 15px;
 }
 
 h1 {
