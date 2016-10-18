@@ -32,8 +32,7 @@ body {
     
     background-color: #000000;
     font-family: 'Nanami', 'Helvetica', sans-serif;
-    margin: 0px;
-    padding: 15px;
+    margin: 0;
 }
 
 h1 {
@@ -108,7 +107,10 @@ svg {
 
 .content {
     
+    margin:15px;
     width:450px;
+    overflow-y: hidden;
+    overflow-x: visible !important;
     
 }
 #HeadNav {
@@ -116,13 +118,11 @@ svg {
     width: 100%;
 }
 #socialPanel {
-    display: block;
     width: 92.36%;
     margin-right: auto;
     height: 2em;
     margin-left: auto;
-    white-space: nowrap;
-    overflow: hidden;
+    display: block;
 }
 .socialIcons {
     padding-right: 0.175em;
