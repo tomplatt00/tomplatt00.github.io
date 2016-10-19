@@ -40,8 +40,6 @@
 		vertical-align:middle;
 		display:inline-block;
 		overflow:auto;
-		padding:25px 25px 0;
-		border-bottom:25px solid transparent;
 		margin-left:5%;
 		margin-right:5%;
 		max-height:95%;
@@ -95,8 +93,6 @@
 		margin-left:10px;
 		margin-right:10px;
 		max-height:98%;
-		padding:10px 10px 0;
-		border-bottom:10px solid transparent
 	}
 
 }
