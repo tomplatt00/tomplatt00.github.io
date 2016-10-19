@@ -35,6 +35,15 @@ body {
     margin: 15px;
 }
 
+br {
+    -webkit-touch-callout: none;
+  -webkit-user-select: none;   
+  -khtml-user-select: none;    
+  -moz-user-select: none;   
+  -ms-user-select: none;      
+  user-select: none;   
+}
+
 h1 {
     font-size: 3.750em;
     line-height: 0.15;
