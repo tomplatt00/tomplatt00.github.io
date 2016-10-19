@@ -80,10 +80,8 @@ a.albumDL {
     /* right:0; */
     -webkit-transition-duration: 0.05s;
     transition-duration: 0.05s;
-    -webkit-transition-property: padding-bottom;
-    -webkit-transition-property: border-bottom;
-    transition-property: padding-bottom;
-    transition-property: border-bottom;
+    -webkit-transition-property: all;
+    transition-property: all;
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
 }
@@ -92,8 +90,9 @@ a.albumDL {
 a.albumDL:hover, a.albumDL:focus, a.albumDL:active {
     
     padding-bottom: 3px;
-    border-bottom: 4px solid #F50641;
+    border-bottom: 2px solid #F50641;
     text-decoration: none;
+    bottom: .1em;
 }
 
 svg {
