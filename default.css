@@ -332,14 +332,13 @@ svg {
     display:block;
     width:90%;
     line-height: 2em;
-    font-family: 'Profont', Courier, monospace;
     margin-left: auto;
     margin-right: auto;
 }
 
 #emailLeftColumn {
-    display:inline-block;
-    font-size: 1.06em;
+    display: inline-block;
+    font-size: 1.1em;
     text-align: justify;
     text-align-last: justify;
     max-width: 50%;
@@ -360,7 +359,8 @@ svg {
 .mailto {
     text-decoration: underline;
     float: right;
-    font-size: 1em;
+    font-size: .9em;
+    letter-spacing: .03em;
 }
 
 /*dumb crt glow shit  dumb crt glow shit  dumb crt glow shit*/
@@ -438,4 +438,4 @@ a.albumDL {text-shadow: 0px 0px 22px rgba(245, 6, 66, 0.81);}
 
 .hr, .vr {box-shadow: 0px 0px 11px 7px rgba(245,6,66,0.15);}
 
-.album-info {text-shadow: 0px 0px 14px rgba(245, 6, 66, 0.9);}
+.album-info, .mailDesc {text-shadow: 0px 0px 14px rgba(245, 6, 66, 0.9);}
